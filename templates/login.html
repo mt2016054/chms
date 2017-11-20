@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home | IIITB</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap-datepicker3.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'login.css') }}">
+<script src="{{ url_for('static', filename = 'jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'Home.js') }}"></script>
+</head>
+<body>
+
+<!--<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style="display: none;"> -->
+    	  <div class="modal-dialog">
+    	 
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form action="http://127.0.0.1:5000/home" method="post">
+					<input type="text" class="text-uppercase" name="user" placeholder="Username" required>
+					<input type="password" name="pass" placeholder="Password" required>
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+				  <div id="error">{{msg}}</div>	
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		 
+		  </body>
+		  
+</html>		  
+		  
